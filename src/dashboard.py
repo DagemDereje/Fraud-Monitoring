@@ -9,9 +9,9 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from src.app import risk_level, risk_reasons, TransactionRequest
-from src.generator import SCENARIOS, TransactionGenerator
-from src.scoring import load_model, score
+from app import risk_level, risk_reasons, TransactionRequest
+from generator import SCENARIOS, TransactionGenerator
+from scoring import load_model, score
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 METRICS_PATH = PROJECT_ROOT / "models" / "model_metrics.json"
