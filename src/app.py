@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from src.scoring import load_model, score
+from scoring import load_model, score
 
 
 @asynccontextmanager
