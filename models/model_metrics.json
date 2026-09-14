@@ -1,0 +1,90 @@
+{
+  "model": "XGBClassifier",
+  "trained_at_utc": "2026-09-03T10:28:22.203924+00:00",
+  "rows": 10000,
+  "fraud_rate": 0.007,
+  "split": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "scale_pos_weight": 141.8571,
+  "features": [
+    "amount",
+    "merchant_category",
+    "location_mismatch",
+    "device_velocity"
+  ],
+  "threshold_selection": {
+    "method": "F1 maximization on validation set",
+    "max_alert_rate": 0.02
+  },
+  "validation": {
+    "threshold": 0.974607,
+    "precision": 0.4091,
+    "recall": 0.8182,
+    "f1": 0.5455,
+    "roc_auc": 0.9865,
+    "pr_auc": 0.4374,
+    "alert_rate": 0.0147,
+    "true_positives": 9,
+    "false_positives": 13,
+    "true_negatives": 1476,
+    "false_negatives": 2
+  },
+  "test": {
+    "threshold": 0.974607,
+    "precision": 0.4615,
+    "recall": 0.6,
+    "f1": 0.5217,
+    "roc_auc": 0.9768,
+    "pr_auc": 0.4334,
+    "alert_rate": 0.0087,
+    "true_positives": 6,
+    "false_positives": 7,
+    "true_negatives": 1483,
+    "false_negatives": 4
+  },
+  "feature_importance": [
+    {
+      "feature": "numeric__device_velocity",
+      "importance": 0.185547
+    },
+    {
+      "feature": "numeric__amount",
+      "importance": 0.172417
+    },
+    {
+      "feature": "categorical__merchant_category_travel",
+      "importance": 0.166361
+    },
+    {
+      "feature": "numeric__location_mismatch",
+      "importance": 0.165747
+    },
+    {
+      "feature": "categorical__merchant_category_other",
+      "importance": 0.054434
+    },
+    {
+      "feature": "categorical__merchant_category_gaming",
+      "importance": 0.037655
+    },
+    {
+      "feature": "categorical__merchant_category_hotel",
+      "importance": 0.033854
+    },
+    {
+      "feature": "categorical__merchant_category_electronics",
+      "importance": 0.033158
+    },
+    {
+      "feature": "categorical__merchant_category_fuel",
+      "importance": 0.030553
+    },
+    {
+      "feature": "categorical__merchant_category_clothing",
+      "importance": 0.027084
+    }
+  ]
+}
