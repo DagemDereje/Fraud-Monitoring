@@ -3,3 +3,4 @@ base = "dark"
 
 [server]
 headless = true
+fileWatcherType = "none"
